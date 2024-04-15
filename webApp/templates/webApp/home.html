@@ -1,0 +1,129 @@
+{% extends 'webApp/index.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'webApp/home.css' %}">
+    <title>O F A L</title>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <p class="row-title">A L B U M S:</p>
+        <div class="slider">
+            <div class="block" style="background-color: #9BBCD9;">
+                <a href="{% url 'gdd' %}">
+                    <img class="block-image" src="{% static 'webApp/covers/GDD.png' %}" alt="Good Day Detour">
+                    <div class="block-details">
+                        <div class="block-title">Good Day Detour</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="block" style="background-color: #9BBCD9;">
+                <a href="https://soundcloud.com/user-ofa1/sets/m-v" target="_blank">
+                    <img class="block-image" src="{% static 'webApp/covers/MV.png' %}" alt="MV">
+                    <div class="block-details">
+                        <div class="block-title">MV</div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="row-title">S I N G L E S:</p>
+        <div class="slider">
+
+            <div class="block" style="background-color: #9BBCD9;">
+                <a href="https://youtu.be/4SA5C2TrwNs?si=X41H4UDqMvWEpw7I" target="_blank">
+                    <img class="block-image" src="{% static 'webApp/covers/Melon.png' %}" alt="Melon">
+                    <div class="block-details">
+                        <div class="block-title">Melon</div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="block" style="background-color: #9BBCD9;">
+                <a href="https://youtu.be/pMlqmWYz6dE?si=fTRaFlRNAdbMFmiv" target="_blank">
+                    <img class="block-image" src="{% static 'webApp/covers/Bit Runner.png' %}" alt="Bit Runner">
+                    <div class="block-details">
+                        <div class="block-title">Bit Runner</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="block" style="background-color: #9BBCD9;">
+                <a href="https://youtu.be/HouRMHruwVw?si=ax9ck6FjcHVH5ZCH" target="_blank">
+                    <img class="block-image" src="{% static 'webApp/covers/RCC.jpg' %}" alt="Relatively Connected Emotions">
+                    <div class="block-details">
+                        <div class="block-title">Relatively Connected Emotions</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="block" style="background-color: #9BBCD9;">
+                <a href="https://youtu.be/Eb8udYcrtZc?si=OGdjjNzUmfWTnliG" target="_blank">
+                    <img class="block-image" src="{% static 'webApp/covers/Confession.png' %}" alt="Confession">
+                    <div class="block-details">
+                        <div class="block-title">Confession</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="row-title">V I D E O S:</p>
+        <div class="slider">
+            <div class="block-soon" style="background-color: rgba(255,255,255,0.5);">
+                <div class="circle">
+                    M O R E<br>
+                    O U T<br>
+                    S O O N<br>
+                    . . .<br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    let initialHeight = document.body.scrollHeight;
+    let scroll = true;
+
+    // Check if the height of the website changes
+    setInterval(function() {
+        let currentHeight = document.body.scrollHeight;
+        if (currentHeight > initialHeight && currentHeight <= initialHeight+130 && scroll) {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+            if (currentHeight === initialHeight+130) {
+                scroll = false;
+            }
+        } else if (currentHeight == initialHeight){
+            scroll = true;
+        } else {
+            scroll = false;
+        }
+    }, 100);
+
+    let initialBlockHeight = '280px';
+    setInterval(function () {
+        document.querySelectorAll('.block').forEach(block => {
+            if (getComputedStyle(block).height === initialBlockHeight && !block.matches(':hover')) {
+                block.style.zIndex = 0;
+            }
+            block.addEventListener('mouseover', () => {
+                block.style.zIndex = 100;
+            });
+        });
+    }, 0)
+
+    </script>
+
+{% endblock %}
+

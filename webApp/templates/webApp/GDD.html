@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% extends 'webApp/index.html' %}
+
+{% load static %}
+
+{% block head %}
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Stream Good Day Detour by O F A L on all major streaming services - Powered by Anti-Joy.">
+<meta property="og:image" content="https://s3.eu-north-1.amazonaws.com/cdn.antijoy.club/uploads%2F3aabc0fd712648f21340fb9d6c2bd18e.jpg">
+<title translate="no">Good Day Detour</title>
+<link rel="stylesheet" href="{% static 'webApp/GDD/dashlite.css' %}">
+<script type="text/javascript" id="spotify-iframeapi-script" src="{% static 'webApp/GDD/iframe_api.00b040799e64e10f93c7.js' %}" async=""></script>
+<script src="{% static 'webApp/GDD/vue.js' %}"></script>
+<link href="{% static 'webApp/gdd.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<body class="nk-body npc-invest ui-softy" style="overflow-x: hidden;" cz-shortcut-listen="true"> 
+<div id="app" class="nk-app-root" style="background-color: rgb(151, 186, 214);">
+  <!-- Content goes here -->
+  <div class="nk-wrap d-flex">
+    <div class="nk-content nk-content-fluid">
+      <div class="container-xl wide-xl">
+        <div class="nk-content-inner">
+          <div class="nk-content-body">
+            <div class="nk-block">
+              <div class="row mx-auto" style="max-width: 460px;">
+                <div id="" class="col-12 zoom">
+                  <div class="card border m-1" style="border-radius: 10px; background-color: rgb(255, 255, 255); border-color: rgb(219, 223, 234) !important;">
+                    <img src="{% static 'webApp/GDD/uploads_3aabc0fd712648f21340fb9d6c2bd18e.jpg' %}" style="border-radius: 10px;">
+                  </div>
+                </div>
+                <div id="" class="col-12">
+                  <div class="card border m-1" style="border-radius: 10px; background-color: rgb(255, 255, 255); border-color: rgb(219, 223, 234) !important;">
+                    <div class="card-inner p-3">
+                      <div class="row g-2">
+                        <div class="col">
+                          <h6 translate="no" class="mb-0" style="color: rgb(0, 0, 0);">Good Day Detour </h6>
+                          <p translate="no" style="color: rgb(34, 34, 34);">O F A L </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="" class="col-12">
+                  <div class="row g-4 p-1 pr-2 pl-2">
+                    <div class="col-3 zoom">
+                        <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=youtubeMusic" target="_blank">
+                            <img src="{% static 'webApp/GDD/youtubeMusic.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                        </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                        <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=spotify" target="_blank">
+                            <img src="{% static 'webApp/GDD/spotify.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                        </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                      <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=appleMusic" target="_blank">
+                        <img src="{% static 'webApp/GDD/appleMusic.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                      </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                      <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=tidal" target="_blank">
+                        <img src="{% static 'webApp/GDD/tidal.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                      </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                      <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=amazonMusic" target="_blank">
+                        <img src="{% static 'webApp/GDD/amazonMusic.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                      </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                      <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=deezer" target="_blank">
+                        <img src="{% static 'webApp/GDD/deezer.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                      </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                      <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=napster" target="_blank">
+                        <img src="{% static 'webApp/GDD/napster.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                      </a>
+                    </div>
+
+                    <div class="col-3 zoom">
+                      <a href="https://tunelink.co/o-f-a-l/good-day-detour?goto=boomplay" target="_blank">
+                        <img src="{% static 'webApp/GDD/boomplay.png' %}" class="shadow border" style="width: 100%; border-radius: 10px; border-color: rgb(219, 223, 234) !important;">
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 93%;
+    max-height:370px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1px 20px 20px;
+}
+
+.row-title {
+    margin-left: 1ch;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.slider {
+    width: 100%;
+    margin: 3ch;
+    display: inline-flex;
+}
+
+.block {
+    cursor: pointer;
+}
+
+.block, .block-soon {
+    height: 280px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px !important;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, height 0.4s;
+    z-index: 1;
+}
+
+.block-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: height 0.4s;
+    z-index: 0;
+}
+
+.block:hover .block-image {
+    height: 350px;
+}
+
+.block:hover {
+    height: 430px;
+    z-index: 100;
+    transform: translate(4px, 0px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.block-soon:hover .block-image {
+    height: 350px;
+}
+
+.block-soon:hover {
+    z-index: 100;
+    transform: translate(4px, 0px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.block-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.block-details {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.block-soon {
+    position: relative;
+    text-align: center;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(194, 190, 190, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.block-soon:hover .circle {
+    box-shadow: 0 0 0 white;
+}
+
+@media (max-width: 768px) {
+    .block {
+        width: 100%;
+    }
+}

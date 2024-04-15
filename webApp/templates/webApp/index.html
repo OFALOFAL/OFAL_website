@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'webApp/index.css' %}">
+    <link rel="icon" href="{% static 'webApp/cassette.png' %}">
+
+    {% block head %}
+        <title>O F A L</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <img src="{% static 'webApp/header_img.jpg' %}" alt="Background Image" class="background-img">
+        <div class="gradient">
+            <div class="gradient-sides" style="background: rgba(154, 188, 217, 1)"></div>
+            <div class="gradient-center"></div>
+            <div class="gradient-sides" style="background: rgba(255, 182, 193, 1)"></div>
+        </div>
+
+
+        <h5><a href="{% url 'home' %}" class="logo-btn">O F A L</a></h5>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

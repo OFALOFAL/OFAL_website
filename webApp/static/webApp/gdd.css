@@ -1,0 +1,113 @@
+.zoom,
+  .zoom2,
+  .zoom3 {
+    transition: transform .2s ease;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.02);
+    /* IE 9 */
+    -webkit-transform: scale(1.02);
+    /* Safari 3-8 */
+    transform: scale(1.02);
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  [v-cloak] {
+    display: none;
+  }
+
+  h6,
+  p,
+  input,
+  button{
+    font-family:
+      Inter !important;
+  }
+
+
+  .releas  /* Release info */e-info {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+
+  .release:hover .release-info {
+    display: block;
+  }
+
+  /* Load animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Load animations */
+  .fade-in {
+    animation: fadeIn .5s ease-in-out;
+  }
+
+  .slide-in-right {
+    animation: slideInRight .5s ease-in-out;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft .5s ease-in-out;
+  }
+
+  .slide-in-bottom {
+    animation: slideInBottom .5s ease-in-out;
+  }
