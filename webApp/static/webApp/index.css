@@ -86,3 +86,22 @@ header {
     text-decoration: none;
     color: black;
 }
+
+
+@media only screen and (max-width: 1600px) {
+    header {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .gradient-center {
+        width: 100%;
+    }
+    .gradient-sides {
+        visibility: hidden;
+        width: 0;
+    }
+    .background-img {
+        transform: translate(0, -40%) rotate(-0.5deg) scale(3);
+    }
+}

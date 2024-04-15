@@ -89,28 +89,6 @@
     </div>
 
     <script>
-
-    let initialHeight = document.body.scrollHeight;
-    let scroll = true;
-
-    // Check if the height of the website changes
-    setInterval(function() {
-        let currentHeight = document.body.scrollHeight;
-        if (currentHeight > initialHeight && currentHeight <= initialHeight+130 && scroll) {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
-            if (currentHeight === initialHeight+130) {
-                scroll = false;
-            }
-        } else if (currentHeight == initialHeight){
-            scroll = true;
-        } else {
-            scroll = false;
-        }
-    }, 100);
-
     let initialBlockHeight = '280px';
     setInterval(function () {
         document.querySelectorAll('.block').forEach(block => {
