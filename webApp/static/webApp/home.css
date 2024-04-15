@@ -150,6 +150,14 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* Remove hover effect on small screens */
+    .block:hover .block-image,
+    .block:hover {
+        height: auto; /* Reset height to auto on hover */
+        transform: none; /* Reset transform on hover */
+        box-shadow: none; /* Remove box shadow on hover */
+    }
 }
 
 @media only screen and (max-width: 880px) {
